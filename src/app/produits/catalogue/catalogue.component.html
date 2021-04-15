@@ -1,0 +1,13 @@
+<!--<a class="p-2 text-dark" [routerLink] = "['/produits/detail-produit']">Detail produit</a>-->
+
+<div style="text-align: center; margin-top: 2%;">
+<h2>Catalogue :</h2>
+<div style="margin-top: 3%;">
+<div *ngFor = "let p of produits$ | async">
+    <b>Téléphone :</b> {{p.tel}} - <b>Prix :</b> {{p.prix}} 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="addPanier(p.tel)" class="btn btn-outline-primary">Ajout Panier</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="voirDetails(p.tel)" class="btn btn-outline-info">Plus d'informations sur ce produit</button><br/><br/>
+</div>
+</div>
+</div>
