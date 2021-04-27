@@ -24,6 +24,7 @@ const appRoutes : Routes = [
   {path:'',component:AccueilComponent},
   {path:'formulaire',component:FormulaireComponent},
   {path:'compte-client',component:CompteClientComponent},
+  {path:'login',component:LoginComponent},
   {path:'produits', canActivate:[AuthGuard], loadChildren: () => import('./produits/produits.module').then(m => m.ProduitsModule)}
 ]
 

@@ -16,11 +16,11 @@ import {Router} from '@angular/router';
 })
 export class CatalogueComponent implements OnInit {
 
-  produits$ : any = this.getProduits();
+  produits$ : Observable<any> = null; 
 
 
   ngOnInit(): void {
-
+    this.produits$ = this.getProduits();
 
   }
 
